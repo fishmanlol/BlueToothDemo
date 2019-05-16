@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8EB61E6F228C7B27000C71B9 /* VitalSign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB61E6E228C7B27000C71B9 /* VitalSign.swift */; };
+		8EB61E71228C8153000C71B9 /* DevicesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB61E70228C8153000C71B9 /* DevicesViewModel.swift */; };
+		8EB61E73228CC292000C71B9 /* DevicesController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB61E72228CC292000C71B9 /* DevicesController1.swift */; };
 		8ED0C97E228B74F300DD4C05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED0C97D228B74F300DD4C05 /* AppDelegate.swift */; };
-		8ED0C980228B74F300DD4C05 /* VitalSignController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED0C97F228B74F300DD4C05 /* VitalSignController.swift */; };
+		8ED0C980228B74F300DD4C05 /* DevicesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED0C97F228B74F300DD4C05 /* DevicesController.swift */; };
 		8ED0C983228B74F300DD4C05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ED0C981228B74F300DD4C05 /* Main.storyboard */; };
 		8ED0C985228B74F500DD4C05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8ED0C984228B74F500DD4C05 /* Assets.xcassets */; };
 		8ED0C988228B74F500DD4C05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ED0C986228B74F500DD4C05 /* LaunchScreen.storyboard */; };
@@ -26,9 +29,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8EB61E6E228C7B27000C71B9 /* VitalSign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitalSign.swift; sourceTree = "<group>"; };
+		8EB61E70228C8153000C71B9 /* DevicesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesViewModel.swift; sourceTree = "<group>"; };
+		8EB61E72228CC292000C71B9 /* DevicesController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesController1.swift; sourceTree = "<group>"; };
 		8ED0C97A228B74F300DD4C05 /* BlueToothDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlueToothDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ED0C97D228B74F300DD4C05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8ED0C97F228B74F300DD4C05 /* VitalSignController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitalSignController.swift; sourceTree = "<group>"; };
+		8ED0C97F228B74F300DD4C05 /* DevicesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesController.swift; sourceTree = "<group>"; };
 		8ED0C982228B74F300DD4C05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8ED0C984228B74F500DD4C05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8ED0C987228B74F500DD4C05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -112,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				8ED0C99B228B7DD400DD4C05 /* Device.swift */,
+				8EB61E6E228C7B27000C71B9 /* VitalSign.swift */,
 				8ED0C995228B7DD400DD4C05 /* Ear Thermometer */,
 				8ED0C998228B7DD400DD4C05 /* Pulse Oximeter */,
 			);
@@ -157,7 +164,8 @@
 		8ED0C9AD228B8D8200DD4C05 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				8ED0C97F228B74F300DD4C05 /* VitalSignController.swift */,
+				8ED0C97F228B74F300DD4C05 /* DevicesController.swift */,
+				8EB61E72228CC292000C71B9 /* DevicesController1.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -166,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				8ED0C98F228B7D3100DD4C05 /* VitalSignViewModel.swift */,
+				8EB61E70228C8153000C71B9 /* DevicesViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -305,14 +314,17 @@
 				8ED0C99D228B7DD400DD4C05 /* ETDevice.swift in Sources */,
 				8ED0C990228B7D3100DD4C05 /* VitalSignViewModel.swift in Sources */,
 				8ED0C99F228B7DD400DD4C05 /* PODevice.swift in Sources */,
-				8ED0C980228B74F300DD4C05 /* VitalSignController.swift in Sources */,
+				8ED0C980228B74F300DD4C05 /* DevicesController.swift in Sources */,
 				8ED0C99C228B7DD400DD4C05 /* ETData.swift in Sources */,
 				8ED0C99E228B7DD400DD4C05 /* POData.swift in Sources */,
+				8EB61E6F228C7B27000C71B9 /* VitalSign.swift in Sources */,
 				8ED0C97E228B74F300DD4C05 /* AppDelegate.swift in Sources */,
 				8ED0C9AB228B8D7700DD4C05 /* DeviceTableViewCell.swift in Sources */,
 				8ED0C9A9228B87EF00DD4C05 /* UIFont.swift in Sources */,
+				8EB61E71228C8153000C71B9 /* DevicesViewModel.swift in Sources */,
 				8ED0C9A2228B86D800DD4C05 /* Date.swift in Sources */,
 				8ED0C9A0228B7DD400DD4C05 /* Device.swift in Sources */,
+				8EB61E73228CC292000C71B9 /* DevicesController1.swift in Sources */,
 				8ED0C9A7228B87EF00DD4C05 /* UIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -463,6 +475,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DKH5D278T8;
 				INFOPLIST_FILE = "$(SRCROOT)/BlueToothDemo/Other/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -482,6 +495,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DKH5D278T8;
 				INFOPLIST_FILE = "$(SRCROOT)/BlueToothDemo/Other/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

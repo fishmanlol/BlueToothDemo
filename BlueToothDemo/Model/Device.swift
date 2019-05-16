@@ -11,6 +11,7 @@ import Foundation
 class Device: Equatable {
     
     var uuid: String?
+    var data: Any?
     let type: DeviceType
     
     init(uuid: String?, type: DeviceType) {
@@ -26,16 +27,16 @@ class Device: Equatable {
     
 }
 
-enum DeviceType {
+enum DeviceType: CaseIterable {
     case pulseOximeter, earThermometer
     
     var name: String {
         
         switch self {
         case .pulseOximeter:
-            return "pulseOximeter"
+            return "Pulse Oximeter"
         case .earThermometer:
-            return "earThermometer"
+            return "Ear Thermometer"
         }
         
     }

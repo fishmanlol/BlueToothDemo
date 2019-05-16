@@ -9,12 +9,12 @@
 import UIKit
 import SnapKit
 
-class VitalSignController: UIViewController {
+class DevicesController: UIViewController {
     
     weak var devicesTableView: UITableView!
     weak var continueButton: UIButton!
     
-    let vm = VitalSignViewModel()
+    let vm = DevicesViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,13 +23,14 @@ class VitalSignController: UIViewController {
     
     private func setup() {
         title = "Vital Sign"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(editButtonTapped))
         
         let tableView = UITableView()
         tableView.delegate = self
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.separatorStyle = .none
+        tableView.register(DeviceTableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.alwaysBounceVertical = false
         devicesTableView = tableView
         view.addSubview(devicesTableView)
         
@@ -38,10 +39,6 @@ class VitalSignController: UIViewController {
         button.setAttributedTitle(NSAttributedString(string: "Continue", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 20)]), for: .normal)
         continueButton = button
         view.addSubview(continueButton)
-    }
-    
-    @objc private func editButtonTapped() {
-        print(#function)
     }
     
     override func viewDidLayoutSubviews() {
@@ -55,7 +52,7 @@ class VitalSignController: UIViewController {
         }
         
         devicesTableView.snp.makeConstraints { (make) in
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(44)
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
             make.centerX.equalToSuperview()
             make.left.equalToSuperview().offset(24)
             make.bottom.equalTo(continueButton.snp.top).offset(-36)
@@ -64,19 +61,44 @@ class VitalSignController: UIViewController {
 
 }
 
-extension VitalSignController: UITableViewDataSource {
+extension DevicesController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return vm.devicesCount()
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! DeviceTableViewCell
+        cell.selectionStyle = .none
+        cell.tapCover.addTarget(self, action: #selector(test), for: .touchUpInside)
+        let device = vm.devices[indexPath.section]
+        vm.fill(cell, with: device)
+    
         return cell
     }
     
+    @objc func test() {
+        navigationController?.pushViewController(UIViewController(), animated: true)
+    }
     
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 20
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return vm.devicesCount()
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return UIView()
+    }
 }
 
-extension VitalSignController: UITableViewDelegate {
-    
+extension DevicesController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let device = vm.devices[indexPath.section]
+        return vm.deviceCellHeight(for: device)
+    }
 }
+
+

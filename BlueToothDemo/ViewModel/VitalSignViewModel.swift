@@ -10,17 +10,21 @@ import Foundation
 
 class VitalSignViewModel {
     
-    var devices: [Device] = []
+    var vitalSigns: [VitalSign] = []
     
     init() {
         let poDevice = PODevice(uuid: nil, type: .pulseOximeter)
-        let etDevice = ETDevice(uuid: nil, type: .earThermometer)
+        let oxygenVS = VitalSign(type: .oxygen, device: poDevice, data: nil)
+        let pulseVS = VitalSign(type: .pulseRate, device: poDevice, data: nil)
         
-        devices.append(contentsOf: [poDevice, etDevice])
+        let etDevice = ETDevice(uuid: nil, type: .earThermometer)
+        let temperatureVS = VitalSign(type: .temperature, device: etDevice, data: nil)
+        
+        vitalSigns.append(contentsOf: [oxygenVS, pulseVS, temperatureVS])
     }
     
-    func devicesCount() -> Int {
-        return devices.count
+    func deviceCount() -> Int {
+        return DeviceType.AllCases().count
     }
     
 }

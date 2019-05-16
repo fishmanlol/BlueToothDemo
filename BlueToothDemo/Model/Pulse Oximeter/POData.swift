@@ -13,6 +13,11 @@ struct POData {
     var pulseRate: Int?
     var recordTime: Date?
     
+    init(oxygen: Int, pulseRate: Int) {
+        self.oxygen = oxygen
+        self.pulseRate = pulseRate
+    }
+    
     init?(data: [AnyHashable: Any]) {
         
 //        if let oxygenPulse = data["OxygenPulse"] {
