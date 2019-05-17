@@ -39,9 +39,6 @@ struct POData {
 //        }
         
         guard let oxygenPulse = data["OxygenPulse"], let dict = oxygenPulse as? [AnyHashable: Any], let deviceData = dict["DeviceData1"] as? [[String: Any]], let firstData = deviceData.first else { return nil }
-        
-        self.oxygen = Int(firstData["Oxygen"] as? String ?? "")
-        self.pulseRate = Int(firstData["PulseRate"] as? String ?? "")
 
         let year = Int(firstData["year"] as? String ?? "")
         let month = Int(firstData["month"] as? String ?? "")
@@ -49,8 +46,16 @@ struct POData {
         let hour = Int(firstData["hour"] as? String ?? "")
         let min = Int(firstData["min"] as? String ?? "")
         let sec = Int(firstData["sec"] as? String ?? "")
-
-        recordTime = Date(year: year, month: month, day: day, hour: hour, min: min, sec: sec)
+        
+        if let time = Date(year: year, month: month, day: day, hour: hour, min: min, sec: sec) {
+            if time.timeIntervalSinceNow < -15 {
+                return nil
+            } else {
+                self.oxygen = Int(firstData["Oxygen"] as? String ?? "")
+                self.pulseRate = Int(firstData["PulseRate"] as? String ?? "")
+                self.recordTime = time
+            }
+        }
     }
 }
 

@@ -8,8 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		8EB61E6F228C7B27000C71B9 /* VitalSign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB61E6E228C7B27000C71B9 /* VitalSign.swift */; };
-		8EB61E71228C8153000C71B9 /* DevicesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB61E70228C8153000C71B9 /* DevicesViewModel.swift */; };
+		8EB61E71228C8153000C71B9 /* DevicesViewModel2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB61E70228C8153000C71B9 /* DevicesViewModel2.swift */; };
 		8EB61E73228CC292000C71B9 /* DevicesController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB61E72228CC292000C71B9 /* DevicesController1.swift */; };
+		8EB72846228DCF8200F5C425 /* libc.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EB72842228DCF8200F5C425 /* libc.tbd */; };
+		8EB72847228DCF8200F5C425 /* libc++abi.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EB72843228DCF8200F5C425 /* libc++abi.tbd */; };
+		8EB72848228DCF8200F5C425 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EB72844228DCF8200F5C425 /* libc++.tbd */; };
+		8EB72849228DCF8200F5C425 /* libc++.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EB72845228DCF8200F5C425 /* libc++.1.tbd */; };
+		8EB7284C228DCF9500F5C425 /* libDeviceCommand.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EB7284B228DCF9500F5C425 /* libDeviceCommand.a */; };
+		8EB7284F228E07A700F5C425 /* ScaleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB7284E228E07A700F5C425 /* ScaleData.swift */; };
+		8EB72851228E27DC00F5C425 /* DevicesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB72850228E27DC00F5C425 /* DevicesViewModel.swift */; };
 		8ED0C97E228B74F300DD4C05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED0C97D228B74F300DD4C05 /* AppDelegate.swift */; };
 		8ED0C980228B74F300DD4C05 /* DevicesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED0C97F228B74F300DD4C05 /* DevicesController.swift */; };
 		8ED0C983228B74F300DD4C05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ED0C981228B74F300DD4C05 /* Main.storyboard */; };
@@ -17,9 +24,7 @@
 		8ED0C988228B74F500DD4C05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ED0C986228B74F500DD4C05 /* LaunchScreen.storyboard */; };
 		8ED0C990228B7D3100DD4C05 /* VitalSignViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED0C98F228B7D3100DD4C05 /* VitalSignViewModel.swift */; };
 		8ED0C99C228B7DD400DD4C05 /* ETData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED0C996228B7DD400DD4C05 /* ETData.swift */; };
-		8ED0C99D228B7DD400DD4C05 /* ETDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED0C997228B7DD400DD4C05 /* ETDevice.swift */; };
 		8ED0C99E228B7DD400DD4C05 /* POData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED0C999228B7DD400DD4C05 /* POData.swift */; };
-		8ED0C99F228B7DD400DD4C05 /* PODevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED0C99A228B7DD400DD4C05 /* PODevice.swift */; };
 		8ED0C9A0228B7DD400DD4C05 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED0C99B228B7DD400DD4C05 /* Device.swift */; };
 		8ED0C9A2228B86D800DD4C05 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED0C9A1228B86D800DD4C05 /* Date.swift */; };
 		8ED0C9A7228B87EF00DD4C05 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED0C9A4228B87EF00DD4C05 /* UIColor.swift */; };
@@ -30,8 +35,17 @@
 
 /* Begin PBXFileReference section */
 		8EB61E6E228C7B27000C71B9 /* VitalSign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitalSign.swift; sourceTree = "<group>"; };
-		8EB61E70228C8153000C71B9 /* DevicesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesViewModel.swift; sourceTree = "<group>"; };
+		8EB61E70228C8153000C71B9 /* DevicesViewModel2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesViewModel2.swift; sourceTree = "<group>"; };
 		8EB61E72228CC292000C71B9 /* DevicesController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesController1.swift; sourceTree = "<group>"; };
+		8EB72840228DCF2100F5C425 /* BlueTooth-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BlueTooth-Bridging-Header.h"; sourceTree = "<group>"; };
+		8EB72841228DCF2100F5C425 /* DeviceCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceCommand.h; sourceTree = "<group>"; };
+		8EB72842228DCF8200F5C425 /* libc.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libc.tbd; path = usr/lib/libc.tbd; sourceTree = SDKROOT; };
+		8EB72843228DCF8200F5C425 /* libc++abi.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; };
+		8EB72844228DCF8200F5C425 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		8EB72845228DCF8200F5C425 /* libc++.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.1.tbd"; path = "usr/lib/libc++.1.tbd"; sourceTree = SDKROOT; };
+		8EB7284B228DCF9500F5C425 /* libDeviceCommand.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libDeviceCommand.a; sourceTree = "<group>"; };
+		8EB7284E228E07A700F5C425 /* ScaleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleData.swift; sourceTree = "<group>"; };
+		8EB72850228E27DC00F5C425 /* DevicesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesViewModel.swift; sourceTree = "<group>"; };
 		8ED0C97A228B74F300DD4C05 /* BlueToothDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlueToothDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ED0C97D228B74F300DD4C05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8ED0C97F228B74F300DD4C05 /* DevicesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesController.swift; sourceTree = "<group>"; };
@@ -41,9 +55,7 @@
 		8ED0C989228B74F500DD4C05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8ED0C98F228B7D3100DD4C05 /* VitalSignViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitalSignViewModel.swift; sourceTree = "<group>"; };
 		8ED0C996228B7DD400DD4C05 /* ETData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETData.swift; sourceTree = "<group>"; };
-		8ED0C997228B7DD400DD4C05 /* ETDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETDevice.swift; sourceTree = "<group>"; };
 		8ED0C999228B7DD400DD4C05 /* POData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = POData.swift; sourceTree = "<group>"; };
-		8ED0C99A228B7DD400DD4C05 /* PODevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PODevice.swift; sourceTree = "<group>"; };
 		8ED0C99B228B7DD400DD4C05 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		8ED0C9A1228B86D800DD4C05 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		8ED0C9A4228B87EF00DD4C05 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
@@ -59,6 +71,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EB72846228DCF8200F5C425 /* libc.tbd in Frameworks */,
+				8EB72847228DCF8200F5C425 /* libc++abi.tbd in Frameworks */,
+				8EB72848228DCF8200F5C425 /* libc++.tbd in Frameworks */,
+				8EB7284C228DCF9500F5C425 /* libDeviceCommand.a in Frameworks */,
+				8EB72849228DCF8200F5C425 /* libc++.1.tbd in Frameworks */,
 				A55B4386A53352807CCF9390 /* Pods_BlueToothDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -69,6 +86,10 @@
 		05300187C3684C256E45F811 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8EB72842228DCF8200F5C425 /* libc.tbd */,
+				8EB72845228DCF8200F5C425 /* libc++.1.tbd */,
+				8EB72844228DCF8200F5C425 /* libc++.tbd */,
+				8EB72843228DCF8200F5C425 /* libc++abi.tbd */,
 				D1188D19EC31FCF7E0E95A90 /* Pods_BlueToothDemo.framework */,
 			);
 			name = Frameworks;
@@ -83,11 +104,37 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		8EB7283F228DCF2100F5C425 /* OC */ = {
+			isa = PBXGroup;
+			children = (
+				8EB72840228DCF2100F5C425 /* BlueTooth-Bridging-Header.h */,
+				8EB72841228DCF2100F5C425 /* DeviceCommand.h */,
+			);
+			path = OC;
+			sourceTree = "<group>";
+		};
+		8EB7284A228DCF9500F5C425 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				8EB7284B228DCF9500F5C425 /* libDeviceCommand.a */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		8EB7284D228E075B00F5C425 /* Scale */ = {
+			isa = PBXGroup;
+			children = (
+				8EB7284E228E07A700F5C425 /* ScaleData.swift */,
+			);
+			path = Scale;
+			sourceTree = "<group>";
+		};
 		8ED0C971228B74F300DD4C05 = {
 			isa = PBXGroup;
 			children = (
 				8ED0C97C228B74F300DD4C05 /* BlueToothDemo */,
 				8ED0C97B228B74F300DD4C05 /* Products */,
+				8EB7284A228DCF9500F5C425 /* Library */,
 				155F5A35AED93F5EF6A8D696 /* Pods */,
 				05300187C3684C256E45F811 /* Frameworks */,
 			);
@@ -104,6 +151,7 @@
 		8ED0C97C228B74F300DD4C05 /* BlueToothDemo */ = {
 			isa = PBXGroup;
 			children = (
+				8EB7283F228DCF2100F5C425 /* OC */,
 				8ED0C9A3228B87EF00DD4C05 /* Extensions */,
 				8ED0C9B0228B8D9900DD4C05 /* Other */,
 				8ED0C9AE228B8D8C00DD4C05 /* ViewModel */,
@@ -120,6 +168,7 @@
 				8ED0C99B228B7DD400DD4C05 /* Device.swift */,
 				8EB61E6E228C7B27000C71B9 /* VitalSign.swift */,
 				8ED0C995228B7DD400DD4C05 /* Ear Thermometer */,
+				8EB7284D228E075B00F5C425 /* Scale */,
 				8ED0C998228B7DD400DD4C05 /* Pulse Oximeter */,
 			);
 			path = Model;
@@ -129,7 +178,6 @@
 			isa = PBXGroup;
 			children = (
 				8ED0C996228B7DD400DD4C05 /* ETData.swift */,
-				8ED0C997228B7DD400DD4C05 /* ETDevice.swift */,
 			);
 			path = "Ear Thermometer";
 			sourceTree = "<group>";
@@ -138,7 +186,6 @@
 			isa = PBXGroup;
 			children = (
 				8ED0C999228B7DD400DD4C05 /* POData.swift */,
-				8ED0C99A228B7DD400DD4C05 /* PODevice.swift */,
 			);
 			path = "Pulse Oximeter";
 			sourceTree = "<group>";
@@ -174,7 +221,8 @@
 			isa = PBXGroup;
 			children = (
 				8ED0C98F228B7D3100DD4C05 /* VitalSignViewModel.swift */,
-				8EB61E70228C8153000C71B9 /* DevicesViewModel.swift */,
+				8EB61E70228C8153000C71B9 /* DevicesViewModel2.swift */,
+				8EB72850228E27DC00F5C425 /* DevicesViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -311,19 +359,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8ED0C99D228B7DD400DD4C05 /* ETDevice.swift in Sources */,
 				8ED0C990228B7D3100DD4C05 /* VitalSignViewModel.swift in Sources */,
-				8ED0C99F228B7DD400DD4C05 /* PODevice.swift in Sources */,
 				8ED0C980228B74F300DD4C05 /* DevicesController.swift in Sources */,
 				8ED0C99C228B7DD400DD4C05 /* ETData.swift in Sources */,
 				8ED0C99E228B7DD400DD4C05 /* POData.swift in Sources */,
+				8EB7284F228E07A700F5C425 /* ScaleData.swift in Sources */,
 				8EB61E6F228C7B27000C71B9 /* VitalSign.swift in Sources */,
 				8ED0C97E228B74F300DD4C05 /* AppDelegate.swift in Sources */,
 				8ED0C9AB228B8D7700DD4C05 /* DeviceTableViewCell.swift in Sources */,
 				8ED0C9A9228B87EF00DD4C05 /* UIFont.swift in Sources */,
-				8EB61E71228C8153000C71B9 /* DevicesViewModel.swift in Sources */,
+				8EB61E71228C8153000C71B9 /* DevicesViewModel2.swift in Sources */,
 				8ED0C9A2228B86D800DD4C05 /* Date.swift in Sources */,
 				8ED0C9A0228B7DD400DD4C05 /* Device.swift in Sources */,
+				8EB72851228E27DC00F5C425 /* DevicesViewModel.swift in Sources */,
 				8EB61E73228CC292000C71B9 /* DevicesController1.swift in Sources */,
 				8ED0C9A7228B87EF00DD4C05 /* UIColor.swift in Sources */,
 			);
@@ -480,8 +528,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.werur.BlueToothDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/yitong/Library/Autosave Information/BlueToothDemo/BlueToothDemo/OC/BlueTooth-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -500,8 +553,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.werur.BlueToothDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/yitong/Library/Autosave Information/BlueToothDemo/BlueToothDemo/OC/BlueTooth-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

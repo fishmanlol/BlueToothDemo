@@ -28,7 +28,7 @@ class Device: Equatable {
 }
 
 enum DeviceType: CaseIterable {
-    case pulseOximeter, earThermometer
+    case pulseOximeter, earThermometer, scale
     
     var name: String {
         
@@ -37,7 +37,28 @@ enum DeviceType: CaseIterable {
             return "Pulse Oximeter"
         case .earThermometer:
             return "Ear Thermometer"
+        case .scale:
+            return "Electronic Scale"
         }
+    }
+    
+    var serviceUuid: CBUUID {
         
+        switch self {
+        case .pulseOximeter:
+            return CBUUID(string: "49535343-FE7D-4AE5-8FA9-9FAFD205E455")
+        default:
+            return CBUUID(string: "49535343-FE7D-4AE5-8FA9-9FAFD205E455")
+        }
+    }
+    
+    var characteristicUuid: CBUUID {
+        
+        switch self {
+        case .pulseOximeter:
+            return CBUUID(string: "49535343-1E4D-4BD9-BA61-23C647249616")
+        default:
+            return CBUUID(string: "49535343-1E4D-4BD9-BA61-23C647249616")
+        }
     }
 }

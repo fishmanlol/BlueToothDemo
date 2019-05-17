@@ -16,6 +16,10 @@ class DeviceTableViewCell: UITableViewCell {
     weak var oxygenDataLabel: UILabel!
     weak var pulseLabel: UILabel!
     weak var pulseDataLabel: UILabel!
+    weak var earThemometerLabel: UILabel!
+    weak var earThemometerDataLabel: UILabel!
+    weak var scaleLabel: UILabel!
+    weak var scaleDataLabel: UILabel!
     weak var tapCover: UIButton!
     
     lazy var greenBackgroundView: UIButton = {
@@ -38,6 +42,10 @@ class DeviceTableViewCell: UITableViewCell {
             oxygenDataLabel.textColor = allTextColor
             pulseLabel.textColor = allTextColor
             pulseDataLabel.textColor = allTextColor
+            earThemometerLabel.textColor = allTextColor
+            earThemometerDataLabel.textColor = allTextColor
+            scaleLabel.textColor = allTextColor
+            scaleDataLabel.textColor = allTextColor
             deviceNameLabel.textColor = allTextColor
         }
     }
@@ -80,6 +88,22 @@ class DeviceTableViewCell: UITableViewCell {
         contentView.addSubview(pulseDataLabel)
         self.pulseDataLabel = pulseDataLabel
         
+        let earThemometerLabel = UILabel()
+        contentView.addSubview(earThemometerLabel)
+        self.earThemometerLabel = earThemometerLabel
+        
+        let earThemometerDataLabel = UILabel()
+        contentView.addSubview(earThemometerDataLabel)
+        self.earThemometerDataLabel = earThemometerDataLabel
+        
+        let scaleLabel = UILabel()
+        contentView.addSubview(scaleLabel)
+        self.scaleLabel = scaleLabel
+        
+        let scaleDataLabel = UILabel()
+        contentView.addSubview(scaleDataLabel)
+        self.scaleDataLabel = scaleDataLabel
+        
         let tapCover = UIButton()
         tapCover.alpha = 0.011
         self.tapCover = tapCover
@@ -95,28 +119,55 @@ class DeviceTableViewCell: UITableViewCell {
             make.edges.equalToSuperview()
         }
         
-        oxygenLabel.snp.makeConstraints({ (make) in
+        let maxTop: CGFloat = 12
+        let maxHeight: CGFloat = 20
+        
+        oxygenLabel.snp.remakeConstraints({ (make) in
             make.left.equalToSuperview().offset(12)
-            make.top.equalToSuperview().offset(12)
-            make.height.equalTo(20)
+            make.top.equalToSuperview().offset(oxygenLabel.text == nil ? 0 : maxTop)
+            make.height.equalTo(oxygenLabel.text == nil ? 0 : maxHeight)
         })
         
-        oxygenDataLabel.snp.makeConstraints({ (make) in
+        oxygenDataLabel.snp.remakeConstraints({ (make) in
             make.left.equalTo(oxygenLabel.snp.right).offset(6)
-            make.top.equalToSuperview().offset(12)
-            make.height.equalTo(20)
+            make.top.equalToSuperview().offset(oxygenLabel.text == nil ? 0 : maxTop)
+            make.height.equalTo(oxygenLabel.text == nil ? 0 : maxHeight)
         })
 
-        pulseLabel.snp.makeConstraints { (make) in
+        pulseLabel.snp.remakeConstraints { (make) in
             make.left.equalTo(oxygenLabel)
-            make.top.equalTo(oxygenLabel.snp.bottom).offset(12)
-            make.height.equalTo(20)
+            make.top.equalTo(oxygenLabel.snp.bottom).offset(pulseLabel.text == nil ? 0 : maxTop)
+            make.height.equalTo(pulseLabel.text == nil ? 0 : maxHeight)
         }
         
-        pulseDataLabel.snp.makeConstraints { (make) in
+        pulseDataLabel.snp.remakeConstraints { (make) in
             make.left.equalTo(pulseLabel.snp.right).offset(6)
-            make.top.equalTo(oxygenDataLabel.snp.bottom).offset(12)
-            make.height.equalTo(20)
+            make.top.equalTo(oxygenDataLabel.snp.bottom).offset(pulseLabel.text == nil ? 0 : maxTop)
+            make.height.equalTo(pulseLabel.text == nil ? 0 : maxHeight)
+        }
+        
+        earThemometerLabel.snp.remakeConstraints { (make) in
+            make.left.equalTo(pulseLabel)
+            make.top.equalTo(pulseLabel.snp.bottom).offset(earThemometerLabel.text == nil ? 0 : maxTop)
+            make.height.equalTo(earThemometerLabel.text == nil ? 0 : maxHeight)
+        }
+        
+        earThemometerDataLabel.snp.remakeConstraints { (make) in
+            make.left.equalTo(earThemometerLabel.snp.right).offset(6)
+            make.top.equalTo(pulseDataLabel.snp.bottom).offset(earThemometerLabel.text == nil ? 0 : maxTop)
+            make.height.equalTo(earThemometerDataLabel.text == nil ? 0 : maxHeight)
+        }
+        
+        scaleLabel.snp.remakeConstraints { (make) in
+            make.left.equalTo(pulseLabel)
+            make.top.equalTo(pulseLabel.snp.bottom).offset(scaleLabel.text == nil ? 0 : maxTop)
+            make.height.equalTo(scaleLabel.text == nil ? 0 : maxHeight)
+        }
+        
+        scaleDataLabel.snp.remakeConstraints { (make) in
+            make.left.equalTo(scaleLabel.snp.right).offset(6)
+            make.top.equalTo(pulseDataLabel.snp.bottom).offset(scaleLabel.text == nil ? 0 : maxTop)
+            make.height.equalTo(scaleDataLabel.text == nil ? 0 : maxHeight)
         }
         
         tapCover.snp.makeConstraints { (make) in

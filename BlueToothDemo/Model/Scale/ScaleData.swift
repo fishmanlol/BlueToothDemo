@@ -1,26 +1,25 @@
 //
-//  ETData.swift
-//  TestBlueTooth
+//  ScaleData.swift
+//  BlueToothDemo
 //
-//  Created by Yi Tong on 5/14/19.
+//  Created by Yi Tong on 5/16/19.
 //  Copyright © 2019 Yi Tong. All rights reserved.
 //
 
 import Foundation
 
-class ETData {
-    var temperature: Double?
-    var unit: TemperatureUnit?
+class ScaleData {
+    var weight: Double?
     var recordTime: Date?
     
-    init(temperature: Double, unit: TemperatureUnit) {
-        self.temperature = temperature
-        self.unit = unit
+    init(weight: Double) {
+        self.weight = weight
     }
     
     init?(dict: [AnyHashable: Any]) {
         guard let allData = dict["DeviceData"] as? [[String: Any]], let data = allData.first else { return nil }
-        guard let temperature = Double(data["temperature"] as? String ?? "") else { return nil }
+        guard let weight = Double(data["Weight"] as? String ?? "") else { return nil }
+        
         
         let year = Int(data["year"] as? String ?? "")
         let month = Int(data["month"] as? String ?? "")
@@ -35,23 +34,9 @@ class ETData {
             if time.timeIntervalSinceNow < -15 {
                 return nil
             } else {
-                self.temperature = temperature
-                self.unit = TemperatureUnit(rawValue: data["UnitState"] as? String ?? "")
+                self.weight = weight
                 self.recordTime = time
             }
-        }
-    }
-}
-
-enum TemperatureUnit: String {
-    case C, F
-    
-    var symbol: String {
-        switch self {
-        case .C:
-            return "\u{2103}"
-        case .F:
-            return "\u{2109}"
         }
     }
 }

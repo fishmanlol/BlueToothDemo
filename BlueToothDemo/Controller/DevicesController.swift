@@ -1,11 +1,11 @@
+////
+////  ViewController.swift
+////  BlueToothDemo
+////
+////  Created by Yi Tong on 5/14/19.
+////  Copyright © 2019 Yi Tong. All rights reserved.
+////
 //
-//  ViewController.swift
-//  BlueToothDemo
-//
-//  Created by Yi Tong on 5/14/19.
-//  Copyright © 2019 Yi Tong. All rights reserved.
-//
-
 import UIKit
 import SnapKit
 
@@ -13,7 +13,6 @@ class DevicesController: UIViewController {
     
     weak var devicesTableView: UITableView!
     weak var continueButton: UIButton!
-    
     let vm = DevicesViewModel()
 
     override func viewDidLoad() {
@@ -23,6 +22,7 @@ class DevicesController: UIViewController {
     
     private func setup() {
         title = "Vital Sign"
+        vm.delegate = self
         
         let tableView = UITableView()
         tableView.delegate = self
@@ -98,6 +98,12 @@ extension DevicesController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let device = vm.devices[indexPath.section]
         return vm.deviceCellHeight(for: device)
+    }
+}
+
+extension DevicesController: DevicesViewModelDelegate {
+    func reload(indexPath: IndexPath) {
+        devicesTableView.reloadRows(at: [indexPath], with: .automatic)
     }
 }
 
